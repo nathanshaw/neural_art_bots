@@ -6,4 +6,4 @@ brew install portaudio espeak
 echo "updating pip"
 pip install --upgrade pip
 echo "using pip to install python depencancies nltk"
-pip install clang SpeechRecognition pyaudio nltk numpy matplotlib keras_cv tensorflow pycocotools
+pip install --upgrade clang SpeechRecognition pyaudio nltk numpy matplotlib keras_cv keras-nlp tensorflow pycocotools opencv-python tensorflow_text
