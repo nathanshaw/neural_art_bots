@@ -1,0 +1,6 @@
+[submodule "stable_diffusion"]
+	path = stable_diffusion
+	url = https://github.com/nathanshaw/stable_diffusion.git
+[submodule "audio_transcription"]
+	path = audio_transcription
+	url = https://github.com/nathanshaw/audio_transcription.git
