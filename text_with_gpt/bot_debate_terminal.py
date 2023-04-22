@@ -133,20 +133,25 @@ def generateRandomPersonalityTraits(complexity):
             traits.append(pos_traits[randint(0, len(pos_traits) - 1)])
     return traits
 
-def getSystemVoices():
-    good_voices = ['Agnes', 'Albert', 'Alice', 'Allison', 
-                   'Alva', 'Amira', 'Anna', 'Ava', 'Bahh', 
+def getSystemVoices(gender):
+    if gender == "Male":
+        good_voices = ['Agnes', 'Albert', 'Bahh', 
                    'Bells', "Boing", "Bubbles", "Carmit", 
-                   "Cellos", 'Damayanti', 'Daniel', 'Daria', 
-                   'Ellen', 'Evan', 'Fred', 'Ioana', 'Joana', 
-                   "Junior", "Kanya", "Karen", "Kate", "Kathy", 
-                   "Kyoko", "Lana", "Laura", "Lekha", "Lesya", 
-                   "Linh", "Luciana", "Meijia", "Melina", "Milena", 
-                   "Moira", 'Nathan', 'Nora', 'Oliver', 'Paulina',
-                   'Ralph', 'Rishi', 'Samantha', 'Sangeeta', 'Sara',
-                   'Satu', 'Sinji','Stephanie', 'Tessa', 'Thomas', 
-                   'Tingting', 'Trinoids', 'Whisper', 'Xander', 'Yelda',
-                   'Yuna', 'Zarvox', 'Zosia', 'Zuzana']
+                   "Cellos", 'Damayanti', 'Daniel', 'Evan', 'Fred', 'Ioana', 'Joana', 
+                   "Junior", "Kanya", 
+                   "Linh", "Luciana", "Meijia",
+                   'Nathan', 'Nora', 'Oliver', 'Paulina',
+                   'Ralph', 'Rishi', 'Sangeeta', 
+                   'Satu', 'Sinji', 'Stephanie', 'Thomas', 
+                   'Tingting', 'Trinoids', 'Whisper', 'Xander',  'Zarvox', 'Zosia', 'Zuzana']
+    else:
+        good_voices = ['Alice', 'Allison', 
+                   'Alva', 'Amira', 'Anna', 'Ava', 'Daria', 
+                   'Ellen', "Karen", "Kate", "Kathy", "Kyoko", "Lana", 
+                   "Laura", "Lekha", "Lesya", "Melina", "Milena", 
+                   "Moira", 'Samantha', 'Sara', 'Tessa', 'Yelda',
+                   'Yuna']
+        
     bad_voices = ['Bahh', 'Sinja', 'Paulina', 'Jasper' ]
     # TODO - need to check that each voice exists and can be called somehow TODO TODO
     # Extract the voice names from each line
@@ -173,7 +178,7 @@ def randomlyGeneratePersona(complexity, model):
     # function that returns a dict containing all the personality parameters to run the program
     genders = ['Male', 'Female']
     gender = genders[randint(0, len(genders) - 1)]
-    voices = getSystemVoices()
+    voices = getSystemVoices(gender)
     persona = {
         'name': getRandomName(gender),
         'gender': gender,
