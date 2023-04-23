@@ -4,3 +4,9 @@
 [submodule "audio_transcription"]
 	path = audio_transcription
 	url = https://github.com/nathanshaw/audio_transcription.git
+[submodule "text_with_gpt/nlp-question-detection"]
+	path = text_with_gpt/nlp-question-detection
+	url = https://github.com/nathanshaw/nlp-question-detection.git
+[submodule "text_with_gpt/transcriber_app"]
+	path = text_with_gpt/transcriber_app
+	url = https://github.com/nathanshaw/transcriber_app.git
